@@ -1,9 +1,13 @@
 <html>
+    {% load staticfiles %}
     <head>
        <title>First App</title>
+       <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
     </head>
     <body>
         <h1>hello this is index.html</h1>
         {{ insert_me }}
+        <h1> Hi, picture of django</h1>
+        <img src="{% static 'images/django_f.jpg' %}" alt="ops! didnt show up">
     </body>
 </html>
