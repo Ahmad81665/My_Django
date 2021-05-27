@@ -2,12 +2,45 @@
     {% load staticfiles %}
     <head>
        <title>First App</title>
+       
        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
+        <div class="jumbotron text-center">
+            <h1>My First Bootstrap Page Using Django</h1>
+            
+          </div>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+
+              <ul>
+                <h2>Webpages</h2>
+                {% for webpage in Webpages%}
+                <p>{{ webpage.name }}</p>
+                {% endfor %}
+               </ul>
+              </div>
+            <div class="col-sm-4">  
+             <ul>
+                <h2>AccessRecords</h2>
+                {% for Access in AccessRecords%}
+                <p>{{ Access.date }}</p>
+                {% endfor %}
+             </ul>
+            </div>
+
+
+       
+        </div>
+         </div>
+
         <h1>hello this is index.html</h1>
         {{ insert_me }}
         <h1> Hi, picture of django</h1>
-        <img src="{% static 'images/django_f.jpg' %}" alt="ops! didnt show up">
+        <img src="{%static 'images/django.png'%}" alt="Ahmad"/>
+        
+        <img src="{% static 'images/django_f.jpg' %}" alt="My image"/>
     </body>
 </html>
